@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Mercuriales_</title>
+
+    
+
+    <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
+
+    <script type="importmap">
+        {
+          "imports": {
+            "three": "https://unpkg.com/three@v0.153.0/build/three.module.js",
+            "three/addons/": "https://unpkg.com/three@v0.153.0/examples/jsm/"
+          }
+        }
+    </script>
+  <script type="module" crossorigin src="/assets/index-5bdade72.js"></script>
+  <link rel="stylesheet" href="/assets/index-39cc5b15.css">
+</head>
+<body>
+<div id="heading">
+    <a href="https://open.spotify.com/intl-fr/album/2NwQwVxzLRwJu7sjrRVL9I?si=ZtNbTXfWQ4ij3acW_um71g" onclick="window.open(this.href);return false">
+        <span class="navbar__menu-item">
+        <span data-menu-item-text="Mercuriales_" class="navbar__menu-item-title">Mercuriales_</span>
+        <span class="menu-item-hover-image" data-image-url="https://cdns-images.dzcdn.net/images/cover/aa3146e8b52c3a3ff68f4375ff946b2e/500x500.jpg" style="background-image: url(https://cdns-images.dzcdn.net/images/cover/aa3146e8b52c3a3ff68f4375ff946b2e/500x500.jpg);">
+        </span>
+    </span>
+    </a>
+    <div class="border"></div>
+</div>
+
+
+<script>
+    const menuItem = document.querySelector(".navbar__menu-item");
+
+    function followImageCursor(event, menuItem) {
+        const contentBox = menuItem.getBoundingClientRect();
+        const dx = event.pageX - contentBox.x;
+        const dy = event.pageY - contentBox.y;
+        menuItem.children[1].style.transform = `translate(${dx}px, ${dy}px)`;
+    }
+
+    menuItem.addEventListener("mousemove", (event) => {
+        setInterval(followImageCursor(event, menuItem), 1000);
+    });
+</script>
+</body>
+</html>

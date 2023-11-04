@@ -1,0 +1,27 @@
+body {
+    background-color: black;
+    margin: 0;
+}
+
+#heading {
+    position: fixed;
+    width: 100%;
+    padding: 40px;
+}
+
+.border {
+    background: linear-gradient(90deg, gray, 50%, black);
+    height: 2px;
+    width: 1100px;
+    margin-top: 4px;
+}
+
+h1 {
+    font-size: 3em;
+    font-family: Roboto, sans-serif;
+    margin: 0px;
+    color: black;
+}
+
+
+
